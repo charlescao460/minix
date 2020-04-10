@@ -333,7 +333,7 @@ int do_holes(message* m)
 				int32_t hole_size = i - hole_start;
 				if (hole_size >= min_holes)
 				{
-					snprintf(to_print, sizeof(to_print), "Hole:0x%08X~0x%08X, Size:%d(0x%08X).\n", hole_start, i - 1, hole_size, hole_size);
+					snprintf(to_print, sizeof(to_print), "Hole:0x%06X~0x%06X, Size:%d(0x%06X).\n", hole_start, i - 1, hole_size, hole_size);
 					printf("%s", to_print);
 				}
 				is_free = false;
@@ -349,7 +349,7 @@ int do_holes(message* m)
 		}
 	}
 
-	debug_print("VM:do_holes(),IN_USE=(%d)0x%08X.\n", in_use, in_use);
+	debug_print("VM:do_holes(),IN_USE=(%d)0x%06X.\n", in_use, in_use);
 
 	return OK;
 }
